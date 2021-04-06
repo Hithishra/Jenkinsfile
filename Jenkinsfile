@@ -5,6 +5,7 @@ pipeline {
         steps {
         sh '''
         #!/bin/bash
+        set +e
         cd /var/lib/jenkins/workspace/Pipeline-test
         DIR = "C-project"
         if ( -d "$DIR" ) ; then
