@@ -5,9 +5,8 @@ pipeline {
         steps {
         sh '''
         #!/bin/bash
-        cd /var/lib/jenkins/workspace/Pipeline-test
-        git clone https://github.com/Hithishra/C-project.git
-        cd C-project
+        cd /var/lib/jenkins/workspace/Pipeline-test/C-project
+        git pull https://github.com/Hithishra/C-project.git
         make '''
         }
         }
