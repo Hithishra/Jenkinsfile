@@ -6,7 +6,7 @@ pipeline {
         sh '''
         #!/bin/bash
         cd /var/lib/jenkins/workspace/Pipeline-test
-        ls C-project
+        ls | grep "C-project"
         if ( $? == 0 ) ; then
         {
                 cd C-project
