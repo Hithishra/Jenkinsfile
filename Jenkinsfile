@@ -6,9 +6,8 @@ pipeline {
         sh '''
         #!/bin/bash
         cd /var/lib/jenkins/workspace/Pipeline-test
-        ls | grep "C-project"
-        continue
-        if ( $? == 0 ) ; then
+        DIR = "C-project"
+        if ( -d "$DIR" ) ; then
         {
                 cd C-project
                 git pull https://github.com/Hithishra/C-project.git
